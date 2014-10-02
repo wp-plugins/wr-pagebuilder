@@ -48,10 +48,6 @@ class WR_Pb_Product_Plugin {
 		// Generate menu title
 		$menu_title = __( 'WR PageBuilder', WR_PBL );
 
-		if ( $plugin['Available_Update'] && ( 'admin.php' != $pagenow || ! isset( $_REQUEST['page'] ) || ! in_array( $_REQUEST['page'], self::$pages ) ) ) {
-			$menu_title .= " <span class='wr-available-updates update-plugins count-{$plugin['Available_Update']}'><span class='pending-count'>{$plugin['Available_Update']}</span></span>";
-		}
-
 		// Define admin menus
 		$admin_menus = array(
 			'page_title' => __( 'WR PageBuilder', WR_PBL ),
