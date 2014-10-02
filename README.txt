@@ -5,7 +5,7 @@ Tested up to: 4.0
 Stable tag: 3.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-WR PageBuilder is a simple Drag and Drop page builder that helps you build a complete WordPress website in a few minutes without coding knowledge required. 
+WR PageBuilder is a simple Drag and Drop page builder that helps you build a WordPress website in a few minutes without coding knowledge required. 
 
 == Description ==
 
