@@ -155,11 +155,7 @@ class WR_Pb_Core {
 		// Custom css
 		add_action( 'wp_head', array( &$this, 'enqueue_custom_css' ), 25 );
 		add_action( 'wp_head', array( $this, 'print_frontend_styles' ), 25 );
-
-		// Add action after saving settings
-		add_action( 'update_option_wr_customer_account', array( $this, 'save_envato_settings' ), 10, 2 );
-		add_action( 'add_option_wr_customer_account', array( $this, 'save_envato_settings' ), 10, 2 );
-
+		
 		// Register 'wr_installed_product' filter
 		add_filter( 'wr_pb_installed_product', array( __CLASS__, 'register_product' ) );
 

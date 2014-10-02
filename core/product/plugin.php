@@ -224,28 +224,23 @@ class WR_Pb_Product_Plugin {
 
 		// Add the field with the names and function to use for our settings, put it in our new section
 		$fields = array(
-		array(
-				'id'    => 'enable_for',
-				'title' => __( 'Enable PageBuilder for...', WR_PBL ),
-		),
-		array(
-				'id'    => 'cache',
-				'title' => __( 'Enable Caching', WR_PBL ),
-		),
-		array(
-				'id'     => 'bootstrap',
-				'title'  => __( 'Load Bootstrap Assets', WR_PBL ),
-		///// for multiple fields in a setting box
-				'params' => array( 'wr_pb_settings_boostrap_js', 'wr_pb_settings_boostrap_css' ),
-		),
-		array(
-				'id'    => 'fullmode',
-				'title' => __( 'Enable full mode', WR_PBL ),
-		),
-		array(
-				'id'    => 'wr_customer_account',
-
-				'title' => 'License Management',
+			array(
+					'id'    => 'enable_for',
+					'title' => __( 'Enable PageBuilder for...', WR_PBL ),
+			),
+			array(
+					'id'    => 'cache',
+					'title' => __( 'Enable Caching', WR_PBL ),
+			),
+			array(
+					'id'     => 'bootstrap',
+					'title'  => __( 'Load Bootstrap Assets', WR_PBL ),
+			///// for multiple fields in a setting box
+					'params' => array( 'wr_pb_settings_boostrap_js', 'wr_pb_settings_boostrap_css' ),
+			),
+			array(
+					'id'    => 'fullmode',
+					'title' => __( 'Enable full mode', WR_PBL ),
 			),
 		);
 
@@ -462,69 +457,5 @@ class WR_Pb_Product_Plugin {
 <?php _e( 'You should choose NOT to load Bootstrap CSS / JS if your theme or some other plugin installed on your website already loaded it.', WR_PBL ); ?>
 </p>
 <?php
-	}
-
-	/**
-	 * Render HTML code for `WooRockets Customer Account` field.
-	 *
-	 * @return  void
-	 */
-	public static function wr_pb_setting_callback_wr_customer_account() {
-		// Get saved WooRockets Customer Account
-		$envato_username         = '';
-		$envato_api_key          = '';
-		$envato_purchase_code    = '';
-		$customer_account = get_option( 'wr_customer_account', null );
-
-		if ( ! empty( $customer_account ) ) {
-			$envato_username      = $customer_account['envato_username'];
-			$envato_api_key       = $customer_account['envato_api_key'];
-			$envato_purchase_code = $customer_account['envato_purchase_code'];
-
-			$settings['envato_username']        = $envato_username;
-			$settings['envato_api_key']         = $envato_api_key;
-			$settings['envato_purchase_code']   = $envato_purchase_code;
-			do_action( 'wr_envato_purchase_data', WR_PAGEBUILDER_IDENTIFICATION, $settings);
-		}
-		?>
-
-
-		<div>
-			<table style="margin-top: -15px; margin-left: -12px;">
-				<tr>
-					<td><label for="envato_api_key"><?php _e( 'CodeCanyon Username', WR_LIBRARY_TEXTDOMAIN ); ?>:</label>
-						<p class="description">
-							<?php _e( "This is the user name you use to login to http://codecanyon.net", WR_PBL ); ?>
-						</p>
-					</td>
-					<td style="vertical-align: top"><input type="text" value="<?php esc_attr_e( $envato_username ); ?>" class="input-xlarge"
-							id="envato_username" name="wr_customer_account[envato_username]" autocomplete="off" />
-					</td>
-				</tr>
-
-				<tr>
-					<td style="width: 30%"><label for="envato_username"><?php _e( 'CodeCanyon API Key', WR_LIBRARY_TEXTDOMAIN ); ?>:</label>
-						<p class="description">
-							<?php _e( "<a href='http://codecanyon.net/help/api' target='_blank'>Click here</a> if you don't know how to get CodeCanyon API key", WR_PBL ); ?>
-						</p>
-					</td>
-					<td style="vertical-align: top"><input type="text" value="<?php esc_attr_e( $envato_api_key ); ?>" class="input-xlarge" id="envato_api_key"
-							name="wr_customer_account[envato_api_key]" autocomplete="off" /></td>
-				</tr>
-
-				<tr>
-					<td><label for="envato_purchase_code"><?php _e( 'CodeCanyon Purchase Code', WR_LIBRARY_TEXTDOMAIN ); ?>:</label>
-					 	<p class="description">
-							<?php _e( "You can find plugin purchase code on http://codecanyon.net by browsing to your Downloads -> Clicking on Download button -> License certificate & purchase code", WR_PBL ); ?>
-						</p>
-					</td>
-					<td style="vertical-align: top"><input type="text" value="<?php esc_attr_e( $envato_purchase_code ); ?>" class="input-xlarge" id="envato_purchase_code" name="wr_customer_account[envato_purchase_code]" autocomplete="off" /></td>
-				</tr>
-
-			</table>
-
-
-		</div>
-		<?php
 	}
 }

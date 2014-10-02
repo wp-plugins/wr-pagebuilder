@@ -70,9 +70,6 @@ class WR_Pb_Init_Plugin {
 		
 		// Register 'wr_sample_settings_url' filter
 		add_filter( 'wr_pagebuilder_settings_url', array( __CLASS__, 'settings_url' ) );
-		
-		// Hook WR Library with WordPress for update management
-		WR_Pb_Product_Update::hook();
 	}
 	
 	/**
