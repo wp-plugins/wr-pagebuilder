@@ -23,7 +23,10 @@ WR PageBuilder is a simple Drag and Drop page builder that helps you build a com
 * <b>Easy Customization</b>: We provide you with tons of customization for your page: colors, images, text, etc...
 * <b>Spotlight Filter</b>: This feature helps you to find page elements easily.
 * <b>Live Preview</b>: What you see is what you get. Track your changes immediately without switching back and forth.
-<h4>Support</h4>*<a href="http://support.woorockets.com"></a>
+
+<h4>Support</h4>
+
+* <a href="http://www.innogears.com/docs/ig-megamenu-manual/">Documentation</a>
 
 <i>*If you like the plugin, please vote for it!*</i>
 
