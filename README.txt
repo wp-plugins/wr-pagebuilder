@@ -26,7 +26,7 @@ WR PageBuilder is a simple Drag and Drop page builder that helps you build a com
 
 <h4>Support</h4>
 
-* <a href="http://www.innogears.com/docs/ig-megamenu-manual/">Documentation</a>
+* <a href="http://www.woorockets.com/docs/wr-pagebuilder-user-manual/">Documentation</a>
 
 <i>*If you like the plugin, please vote for it!*</i>
 
