@@ -5,11 +5,13 @@ Tested up to: 4.0
 Stable tag: 3.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-WR PageBuilder is a simple Drag and Drop page builder that helps you build a WordPress website in a few minutes without coding knowledge required. 
+WR PageBuilder is a simple Drag and Drop page builder that helps you build a complete WordPress website in a few minutes. 
 
 == Description ==
 
-WR PageBuilder is a simple Drag and Drop page builder that helps you build a complete WordPress website in a few minutes without coding knowledge required. Designed with an intuitive interface, simple and extremely easy to use, this plugin gives a new experience for creating an entire online shop by visual drag-and-drop functionality. The plugin is similar to an advanced editor and used for both post and page. It includes full page elements, widget support, built-in shortcodes and much more options that provide an unlimited number of style variations so there is no need to touch any code. In particular, the remarkable improvement in the live preview mode, there will no longer be any feeling glitzy when creating too many things.
+WR PageBuilder is a simple Drag and Drop page builder that helps you build a complete WordPress website in a few minutes without coding knowledge required. Designed with an intuitive interface, simple and extremely easy to use, this plugin gives a new experience for building pages and creating an entire online shop by visual drag-and-drop functionality. 
+
+The plugin is similar to an advanced editor and used for both post and page. It includes full page elements, widget support, built-in short codes and much more options that provide an unlimited number of style variations so there is no need to touch any code. In particular, the remarkable improvement in the live preview mode, there will no longer be any feeling glitzy when creating too many things.
 
 
 <h4>Main Features:</h4>
@@ -32,7 +34,7 @@ WR PageBuilder is a simple Drag and Drop page builder that helps you build a com
 
 == Installation ==
 1. Upload WR PageBuilder to the /wp-content/plugins/ directory
-2. Activate the plugin through the \\\\\\\'Plugins\\\\\\\' menu in WordPress
+2. Activate the plugin through the 'Plugins' menu in WordPress
 
 == Screenshots ==
 
