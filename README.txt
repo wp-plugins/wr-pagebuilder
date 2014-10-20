@@ -29,7 +29,7 @@ The plugin is similar to an advanced editor and used for both post and page. It 
 
 <h4>Support</h4>
 
-* <a href="http://support.woorockets.com">Support Forum</a>
+* <a href="http://www.woorockets.com/forum/">Support Forum</a>
 * <a href="http://www.woorockets.com/docs/wr-pagebuilder-user-manual/">Documentation</a>
 
 <i>*If you like the plugin, please vote for it!*</i>
