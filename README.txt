@@ -1,4 +1,4 @@
-=== WR Page Builder ===
+=== Page Builder by WooRockets.com ===
 Contributors: woorockets, hieudm
 Tags: page builder, page builder, admin, advanced, content, easy to use, editor, element, page, plugin, post, responsive, visual, widget, builder, CSS, layout, advanced page elements, gallery, building page
 Requires at least: 3.6
