@@ -229,8 +229,8 @@ class WR_Carousel extends WR_Pb_Shortcode_Parent {
 		foreach ( $items as $idx => $item ) {
 			$active                = ($idx + 1 == $initial_open) ? 'active' : '';
 			$item                  = str_replace( '{active}', $active, $item );
-			$item                  = str_replace( '{WIDTH}', ( ! empty( $dimension_width ) ) ? 'width : '. $dimension_width . $dimension_width_unit .';' : '', $item );
-			$item                  = str_replace( '{HEIGHT}', ( ! empty( $dimension_height ) ) ? 'height : '. $dimension_height .'px;' : '', $item );
+			$item                  = str_replace( '{WIDTH}', ( ! empty( $dimension_width ) ) ? ( string ) $dimension_width : '', $item );
+			$item                  = str_replace( '{HEIGHT}', ( ! empty( $dimension_height ) ) ? ( string ) $dimension_height : '', $item );
 			$items[$idx]           = $item;
 			$active_li             = ($idx + 1 == $initial_open) ? "class='active'" : '';
 			$carousel_indicators[] = "<li $active_li></li>";

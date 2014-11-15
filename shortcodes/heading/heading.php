@@ -222,6 +222,7 @@ class WR_Heading extends WR_Pb_Shortcode_Element {
 							'validate'   => 'number',
 						),
 					),
+					'dependency' => array( 'enable_underline', '=', 'yes' )
 				),				
 				WR_Pb_Helper_Type::get_apprearing_animations(),
 				WR_Pb_Helper_Type::get_animation_speeds(),

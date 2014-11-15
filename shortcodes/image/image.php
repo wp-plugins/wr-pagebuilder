@@ -220,14 +220,14 @@ class WR_Image extends WR_Pb_Shortcode_Element {
 			$image_id       = WR_Pb_Helper_Functions::get_image_id( $image_file );
 			$attachment     = wp_prepare_attachment_for_js( $image_id );
 			$image_file     = ( ! empty( $attachment['sizes'][$image_size]['url'] ) ) ? $attachment['sizes'][$image_size]['url'] : $image_file;
-			$html_elemments .= "<img src='{$image_file}'{$alt_text}{$class_img} />";
+			$data = getimagesize( $image_file );
+			$width = $data[0];
+			$height = $data[1];
+			$html_elemments .= "<img width='{$width}' height='{$height}' src='{$image_file}'{$alt_text}{$class_img} />";
 			$script         = '';
 			$target         = '';
 
 			if ( $image_effect == 'yes' AND ! isset( $_POST['action'] ) ) {
-				$data = getimagesize( $image_file );
-				$width = $data[0];
-				$height = $data[1];
 				$html_elemments = "<img src='" . WR_Pb_Helper_Functions::path( 'assets/3rd-party' ) . '/jquery-lazyload/grey.gif' . "' data-original='{$image_file}' width='{$width}' height='{$height}' {$alt_text} {$class_img}/>";
 			}
 

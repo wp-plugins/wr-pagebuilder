@@ -123,7 +123,7 @@ class WR_Buttonbar extends WR_Pb_Shortcode_Parent {
 							'type'       => 'text_append',
 							'type_input' => 'number',
 							'class'      => 'input-mini',
-							'std'        => '5',
+							'std'        => '0',
 							'append'     => 'px',
 							'validate'   => 'number',
 						),
@@ -200,10 +200,10 @@ class WR_Buttonbar extends WR_Pb_Shortcode_Parent {
 		$distance_between = ( isset( $arr_params['distance_between'] ) ) ? intval( $arr_params['distance_between'] ) : '';
 		$sub_htmls = str_replace( '[style]', $distance_between ? "margin-right:{$distance_between}px" : '', $sub_htmls );
 
-		if ( $arr_params['buttonbar_group'] == 'no' ) {
-			$html_element = $sub_htmls;
-		} else {
+		if ( $arr_params['buttonbar_group'] == 'yes__#__ ' ) {
 			$html_element = "<div class='btn-group'>" . $sub_htmls . '</div>';
+		} else {
+			$html_element = $sub_htmls;
 		}
 
 		$cls_alignment = '';

@@ -185,21 +185,29 @@ $enable_fullmode = ! isset( $settings['wr_pb_settings_fullmode'] ) || ( isset( $
 <!-- Link to website -->
 <div id="branding">
 	<div class="pull-left">
-		<a
-			href="http://www.woorockets.com/plugins/wr-pagebuilder.html"
-			target="_blank"><?php _e( 'PageBuilder', WR_PBL ); ?> </a>
-			<?php _e( 'by', WR_PBL )?>
-		<a href="http://www.woorockets.com" target="_blank">WooRockets.com</a>
+		<div>
+			<a
+				href="http://www.woorockets.com/plugins/wr-pagebuilder.html"
+				target="_blank"><?php _e( 'PageBuilder', WR_PBL ); ?> </a>
+				<?php _e( 'by', WR_PBL )?>
+			<a href="http://www.woorockets.com" target="_blank">WooRockets.com</a>
+		</div>
+		<div>
+			<a
+				href="http://www.woorockets.com/docs/wr-pagebuilder-user-manual/"
+				target="_blank"><?php _e( 'Documentation', WR_PBL ); ?> </a>&nbsp;&nbsp;|&nbsp;&nbsp;
+			<a
+				href="http://www.woorockets.com/forum/"
+				target="_blank"><?php _e( 'Support', WR_PBL ); ?> </a>&nbsp;&nbsp;|&nbsp;&nbsp;
+	
+			<a class='wr-report-bug' href='#'><?php _e( 'Report bug', WR_PBL ) ?></a>
+		</div>
 	</div>
 	<div class="pull-right">
-		<a
-			href="http://www.woorockets.com/wordpress-plugins/wr-pagebuilder-docs.html"
-			target="_blank"><?php _e( 'Documentation', WR_PBL ); ?> </a>&nbsp;&nbsp;|&nbsp;&nbsp;
-		<a
-			href="http://www.woorockets.com/wordpress-plugins/wr-pagebuilder-support.html"
-			target="_blank"><?php _e( 'Support', WR_PBL ); ?> </a>&nbsp;&nbsp;|&nbsp;&nbsp;
-
-		<a class='wr-report-bug' href='#'><?php _e( 'Report bug', WR_PBL ) ?></a>
+		<span class="wr-other-free-plugins-text">Other free plugins</span>
+		<a class="wr-logo-40 contactform" href="http://www.woorockets.com/plugins/wr-contactform/?utm_source=WR%20PB%20backend&utm_medium=banner&utm_campaign=Cross%20promo%20plugins" target="_blank"></a>
+		<a class="wr-logo-40 megamenu" href="http://www.woorockets.com/plugins/wr-megamenu/?utm_source=WR%20PB%20backend&utm_medium=banner&utm_campaign=Cross%20promo%20plugins" target="_blank"></a>
+		<a class="wr-logo-40 corsa" href="http://www.woorockets.com/themes/corsa/?utm_source=WR%20PB%20backend&utm_medium=banner&utm_campaign=Cross%20promo%20plugins" target="_blank"></a>
 	</div>
 	<div class="clearbreak"></div>
 </div>

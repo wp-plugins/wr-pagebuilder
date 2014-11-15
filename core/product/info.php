@@ -18,7 +18,7 @@ if ( ! class_exists( 'WR_Pb_Product_Info' ) ) :
  * @since    1.0.0
  */
 class WR_Pb_Product_Info {
-// Link to get product information from Envato
+	// Link to get product information from Envato
 	const INFO_URL = 'http://marketplace.envato.com/api/v3/item:%ITEM-ID%.json';
 
 	// Link to verify product purchase with Envato.
@@ -80,6 +80,9 @@ class WR_Pb_Product_Info {
 	 * @return  mixed  Plugin info if plugin is installed, NULL otherwise.
 	 */
 	public static function get( $plugin ) {
+		// Hook into WordPress
+		self::hook();
+
 		// Verify plugin main file
 		if ( false === strpos( $plugin, '/' ) && false === strpos( $plugin, '\\' ) && ! @is_file( $plugin ) ) {
 			$plugin = self::check( $plugin );
@@ -166,6 +169,67 @@ class WR_Pb_Product_Info {
 		}
 
 		return self::$products[ $plugin ];
+	}
+
+	/**
+	 * Save Envato related data of a product purchase.
+	 *
+	 * @param   string  $plugin   Path to plugin main file.
+	 * @param   string  $options  Associative array of options.
+	 *
+	 * @return  void
+	 */
+	public static function save( $plugin, $options ) {
+		// Get plugin info
+		if ( is_string( $plugin ) ) {
+			$plugin = self::get( $plugin );
+		}
+	
+		if ( ! empty( $plugin ) ) {
+			// Get previously saved purchase data
+			$purchase = get_option( "{$plugin['Item_ID']}_purchase_data", array() );
+	
+			// Get submitted purchase data
+			foreach ( array( 'username', 'api_key', 'purchase_code' ) as $option ) {
+				if ( isset( $options[ "envato_{$option}" ] ) && ! empty( $options[ "envato_{$option}" ] ) ) {
+					if ( ! isset( $purchase[ $option ] ) || $purchase[ $option ] != $options[ "envato_{$option}" ] ) {
+						$purchase[ $option ] = $options[ "envato_{$option}" ];
+					}
+				}
+			}
+	
+			if ( ! isset( $purchase['username'] ) || ! isset( $purchase['api_key'] ) || ! isset( $purchase['purchase_code'] ) ) {
+				return;
+			}
+	
+			// Request WooRockets to verify purchase data
+			$slug = apply_filters( 'wr_product_update_slug', basename( dirname( $plugin['Main_File'] ) ) );
+	
+			$link = str_replace(
+					array( '%PRODUCT%', '%USERNAME%', '%API-KEY%', '%PURCHASE-CODE%' ),
+					array( $slug, $purchase['username'], $purchase['api_key'], $purchase['purchase_code'] ),
+					self::UPDATE_URL
+			);
+	
+			$result = wp_remote_get( $link . '&verify_only=1' );
+	
+			if ( is_wp_error( $result ) ) {
+				echo '<div class="error"><p><strong>' . $result->get_error_message() . '</strong></p></div>';
+	
+				return;
+			}
+	
+			if ( 'OK' != $result['body'] ) {
+				echo '<div class="error"><p><strong>' . $result['body'] . '</strong></p></div>';
+	
+				return;
+			}
+	
+			// Store purchase data to database
+			$purchase['download_url'] = $link;
+	
+			update_option( "{$plugin['Item_ID']}_purchase_data", $purchase );
+		}
 	}
 
 	/**
@@ -275,67 +339,6 @@ class WR_Pb_Product_Info {
 		}
 
 		return self::$product_data[ $item_id ];
-	}
-
-	/**
-	 * Save Envato related data of a product purchase.
-	 *
-	 * @param   string  $plugin   Path to plugin main file.
-	 * @param   string  $options  Associative array of options.
-	 *
-	 * @return  void
-	 */
-	public static function save( $plugin, $options ) {
-		// Get plugin info
-		if ( is_string( $plugin ) ) {
-			$plugin = self::get( $plugin );
-		}
-
-		if ( ! empty( $plugin ) ) {
-			// Get previously saved purchase data
-			$purchase = get_option( "{$plugin['Item_ID']}_purchase_data", array() );
-
-			// Get submitted purchase data
-			foreach ( array( 'username', 'api_key', 'purchase_code' ) as $option ) {
-				if ( isset( $options[ "envato_{$option}" ] ) && ! empty( $options[ "envato_{$option}" ] ) ) {
-					if ( ! isset( $purchase[ $option ] ) || $purchase[ $option ] != $options[ "envato_{$option}" ] ) {
-						$purchase[ $option ] = $options[ "envato_{$option}" ];
-					}
-				}
-			}
-
-			if ( ! isset( $purchase['username'] ) || ! isset( $purchase['api_key'] ) || ! isset( $purchase['purchase_code'] ) ) {
-				return;
-			}
-
-			// Request WooRockets to verify purchase data
-			$slug = apply_filters( 'wr_product_update_slug', basename( dirname( $plugin['Main_File'] ) ) );
-
-			$link = str_replace(
-				array( '%PRODUCT%', '%USERNAME%', '%API-KEY%', '%PURCHASE-CODE%' ),
-				array( $slug, $purchase['username'], $purchase['api_key'], $purchase['purchase_code'] ),
-				self::UPDATE_URL
-			);
-
-			$result = wp_remote_get( $link . '&verify_only=1' );
-
-			if ( is_wp_error( $result ) ) {
-				echo '<div class="error"><p><strong>' . $result->get_error_message() . '</strong></p></div>';
-
-				return;
-			}
-
-			if ( 'OK' != $result['body'] ) {
-				echo '<div class="error"><p><strong>' . $result['body'] . '</strong></p></div>';
-
-				return;
-			}
-
-			// Store purchase data to database
-			$purchase['download_url'] = $link;
-
-			update_option( "{$plugin['Item_ID']}_purchase_data", $purchase );
-		}
 	}
 }
 

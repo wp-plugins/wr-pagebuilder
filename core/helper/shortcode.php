@@ -703,7 +703,15 @@ if ( ! class_exists( 'WR_Pb_Helper_Shortcode' ) ) {
 				}
 			}
 
-			$content = do_shortcode( $autop ? wpautop( $content ) : $content );
+			if ( defined( 'WP_ADMIN' ) ) {
+				// Keep non-WR shortcode as they are in preview iframe
+				$content = str_replace( '[', '&#91;', $content );
+				$content = str_replace( '&#91;wr_', '[wr_', $content );
+				$content = str_replace( '&#91;/wr_', '[/wr_', $content );
+				$content = do_shortcode( $autop ? wpautop( $content ) : $content );
+			} else {
+				$content = do_shortcode( $autop ? wpautop( $content ) : $content );
+			}
 
 			// remove empty p tag which wrap <div>
 			$content = preg_replace( '/<p>(<!--[^>]*-->)*\n*(<div)/s', '$2', $content );

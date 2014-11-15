@@ -76,7 +76,7 @@ class WR_Pb_Core {
 		// filter assets
 		add_filter( 'wr_pb_register_assets', array( &$this, 'apply_assets' ) );
 		add_action( 'admin_head', array( &$this, 'load_assets' ), 10 );
-		add_action( 'admin_head', array( &$this, 'load_elements_list' ));
+		add_action( 'admin_head', array( &$this, 'load_elements_list' ), 10 );
 		// translation
 		add_action( 'init', array( &$this, 'translation' ) );
 		// register modal page
@@ -907,7 +907,7 @@ class WR_Pb_Core {
 	 * @return void
 	 */
 	function load_elements_list() {
-		if ( $this->check_support( 'has_editor' ) ) {
+		if ( $this->check_support() ) {
 			ob_start();
 			include WR_PB_TPL_PATH . '/select-elements.php';
 			ob_flush();

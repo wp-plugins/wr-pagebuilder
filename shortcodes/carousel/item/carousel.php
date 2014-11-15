@@ -87,7 +87,7 @@ if ( ! class_exists( 'WR_Item_Carousel' ) ) {
 		public function element_shortcode_full( $atts = null, $content = null ) {
 			extract( shortcode_atts( $this->config['params'], $atts ) );
 			$content_class = ! empty( $image_file ) ? 'carousel-caption' : 'carousel-content';
-			$img           = ! empty( $image_file ) ? "<img src='$image_file' style='{HEIGHT}'>" : '';
+			$img           = ! empty( $image_file ) ? "<img width='{WIDTH}' height='{HEIGHT}' src='$image_file' style='height : {HEIGHT}px;'>" : '';
 
 			// remove image shortcode in content
 			$content = WR_Pb_Helper_Shortcode::remove_wr_shortcodes( $content, 'wr_image' );

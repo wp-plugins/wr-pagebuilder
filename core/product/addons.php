@@ -31,6 +31,22 @@ class WR_Pb_Product_Addons extends WR_Pb_Product_Info {
 	);
 
 	/**
+	 * Hook into WordPress.
+	 *
+	 * @return  void
+	 */
+	public static function hook() {
+		// Register Ajax action
+		static $registered;
+	
+		if ( ! isset( $registered ) ) {
+			add_action( 'wp_ajax_wr-addons-management',  array( __CLASS__, 'manage' ) );
+	
+			$registered = true;
+		}
+	}
+
+	/**
 	 * Render addons installation and management screen.
 	 *
 	 * @param   string  $plugin_file  Either absolute path to plugin main file or plugin's identified name defined in WooRockets server.
@@ -38,6 +54,9 @@ class WR_Pb_Product_Addons extends WR_Pb_Product_Info {
 	 * @return  void
 	 */
 	public static function init( $plugin_file ) {
+		// Hook into WordPress
+		self::hook();
+
 		// Get template path
 		if ( $tmpl = WR_Pb_Loader::get_path( 'product/tmpl/addons.php' ) ) {
 			// Get product information
@@ -413,22 +432,6 @@ class WR_Pb_Product_Addons extends WR_Pb_Product_Info {
 				'action'  => $action,
 				'message' => $result->get_error_message(),
 			);
-		}
-	}
-
-	/**
-	 * Hook into WordPress.
-	 *
-	 * @return  void
-	 */
-	public static function hook() {
-		// Register Ajax action
-		static $registered;
-
-		if ( ! isset( $registered ) ) {
-			add_action( 'wp_ajax_wr-addons-management',  array( __CLASS__, 'manage'  ) );
-
-			$registered = true;
 		}
 	}
 }

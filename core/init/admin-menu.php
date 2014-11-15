@@ -40,6 +40,22 @@ class WR_Pb_Init_Admin_Menu {
 	protected static $replace = array();
 
 	/**
+	 * Hook into WordPress.
+	 *
+	 * @return  void
+	 */
+	public static function hook() {
+		// Register action to manipulate admin menu
+		static $registered;
+	
+		if ( ! isset( $registered ) ) {
+			add_action( 'admin_menu', array( __CLASS__, 'admin_menu' ), 1000 );
+	
+			$registered = true;
+		}
+	}
+
+	/**
 	 * Register a menu to be added to WordPress admin menu.
 	 *
 	 * Below is a sample use of this method:
@@ -76,6 +92,9 @@ class WR_Pb_Init_Admin_Menu {
 	 * @return  void
 	 */
 	public static function add( $menu, $parent_slug = null ) {
+		// Hook into WordPress
+		self::hook();
+
 		if ( ! isset( $menu['menu_title'] ) ) {
 			return;
 		}
@@ -111,6 +130,9 @@ class WR_Pb_Init_Admin_Menu {
 	 * @return  void
 	 */
 	public static function remove( $menu_slug, $parent_slug = null ) {
+		// Hook into WordPress
+		self::hook();
+
 		self::$remove[$menu_slug] = $parent_slug;
 	}
 
@@ -139,6 +161,9 @@ class WR_Pb_Init_Admin_Menu {
 	 * @return  void
 	 */
 	public static function replace( $label, $menu, $parent_slug = null ) {
+		// Hook into WordPress
+		self::hook();
+
 		self::$replace[$label][empty( $parent_slug ) ? 0 : $parent_slug] = $menu;
 	}
 
@@ -223,22 +248,6 @@ class WR_Pb_Init_Admin_Menu {
 					}
 				}
 			}
-		}
-	}
-
-	/**
-	 * Hook into WordPress.
-	 *
-	 * @return  void
-	 */
-	public static function hook() {
-		// Register action to manipulate admin menu
-		static $registered;
-
-		if ( ! isset( $registered ) ) {
-			add_action( 'admin_menu', array( __CLASS__, 'admin_menu' ), 1000 );
-
-			$registered = true;
 		}
 	}
 }
