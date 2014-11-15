@@ -50,3 +50,13 @@ The plugin is similar to an advanced editor and used for both post and page. It 
 == More Details ==
 
 For further information, product details, help and tutorials, please visit our website: http://woorockets.com/
+
+== Changelog ==
+
+= 2.4.1 =
+
+#Fixed There is no elements displayed on Element Adding form when activating WR One template
+#Fixed The widget not works
+^Changed Footer links
+^Improved Preview feature
+^Improved Backend style

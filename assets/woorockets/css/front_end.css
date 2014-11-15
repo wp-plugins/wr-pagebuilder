@@ -116,8 +116,16 @@ ul.wr-social-links li a.twitter:hover {
 .jsn-bootstrap3 .btn-group .btn {
 	margin-bottom: 5px;
 }
+.jsn-bootstrap3 .btn-toolbar.text-center .btn-group {
+	float: none;
+}
 
 /*------   Icon   ------*/
 .jsn-bootstrap3 .progress-info i {
 	margin-right: 10px;
+}
+
+/*------   Accordion   ------*/
+.jsn-bootstrap3 .elementFilter {
+	margin: 0;
 }
