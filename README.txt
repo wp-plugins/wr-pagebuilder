@@ -60,3 +60,8 @@ For further information, product details, help and tutorials, please visit our w
 ^Changed Footer links
 ^Improved Preview feature
 ^Improved Backend style
+
+= 2.4.2 =
+
+^Changed Footer links
+^Improve core functions

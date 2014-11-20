@@ -76,17 +76,16 @@
 	<div class="wr-banner-wrapper">
 		<h3>See our other awesomeness</h3>
 		<div class="wr-banner-l">
-			<a href="http://www.woorockets.com/plugins/wr-megamenu/?utm_source=WR%20PB%20backend%20settings&utm_medium=banner&utm_campaign=Cross%20promo%20plugins" target="_blank">
+			<a href="http://www.woorockets.com/plugins/wr-megamenu/?utm_source=PageBuilder%20Setting&utm_medium=banner&utm_campaign=Cross%20Promo%20Plugins" target="_blank">
 				<img src="<?php echo WR_Pb_Helper_Functions::path( 'assets/woorockets' ) . '/images/banners/MegaMenu_S.jpg'; ?>" alt="WR Mega Menu" />
 			</a>
-			<a href="http://www.woorockets.com/plugins/wr-contactform/?utm_source=WR%20PB%20backend%20settings&utm_medium=banner&utm_campaign=Cross%20promo%20plugins" target="_blank">
+			<a href="http://www.woorockets.com/plugins/wr-contactform/?utm_source=PageBuilder%20Setting&utm_medium=banner&utm_campaign=Cross%20Promo%20Plugins" target="_blank">
 				<img src="<?php echo WR_Pb_Helper_Functions::path( 'assets/woorockets' ) . '/images/banners/ContactForm_S.jpg'; ?>" alt="WR Contact Form" />
 			</a>
-			<a href="http://www.woorockets.com/themes/corsa/?utm_source=WR%20PB%20backend%20settings&utm_medium=banner&utm_campaign=Cross%20promo%20plugins" target="_blank">
+			<a href="http://www.woorockets.com/themes/corsa/?utm_source=PageBuilder%20Setting&utm_medium=banner&utm_campaign=Cross%20Promo%20Plugins" target="_blank">
 				<img src="<?php echo WR_Pb_Helper_Functions::path( 'assets/woorockets' ) . '/images/banners/Corsa_S.jpg'; ?>" alt="WR Corsa" />
 			</a>
 		</div>
-		
 	</div>
 </div>
 
@@ -101,15 +100,6 @@
 			loading: "#wr-pb-clear-cache .layout-loading",
 			message: $("#wr-pb-clear-cache").parent().find(".layout-message"),
 		});
- 		jQuery(".wr-accordion-title").click(function() {
- 			if (jQuery(this).hasClass("active")) {
- 				jQuery(this).removeClass("active");
- 				jQuery(this).parent().find(".wr-accordion-content").slideUp();
-			} else {
- 				jQuery(this).addClass("active");
- 				jQuery(this).parent().find(".wr-accordion-content").slideDown();
-			}
-		});
         ';
 
 WR_Pb_Init_Assets::inline( 'js', $script );
@@ -121,6 +111,9 @@ WR_Pb_Init_Assets::inline( 'js', $script );
         .jsn-bootstrap3 .checkbox { background:#fff; }
         #wr-pb-clear-cache, .layout-message { margin-left: 6px; }
         .jsn-icon-loading { background: url("' . $loading_img . '") no-repeat scroll left center; content: " "; display: none; height: 16px; width: 16px; float: right; margin-left: 20px; margin-top: -26px; padding-top: 10px; }
+<<<<<<< Updated upstream
+		.wr-banner-wrapper .wr-banner { float: left; line-height: 0; margin: 0px 10px 0px 10px; }
+=======
 		.wr-banner-l a{
 			text-decoration: none;
 		}
@@ -130,5 +123,6 @@ WR_Pb_Init_Assets::inline( 'js', $script );
 		.wr-accordion { border: 1px solid #E5E5E5; margin-top: 20px; }
 		.wr-accordion-title { margin: 0; padding: 8px 20px; cursor: pointer; background: #C3C3C3; }
 		.wr-accordion-content { padding: 0; border-top: 1px solid #E5E5E5; line-height: 0; display: none; }
+>>>>>>> Stashed changes
         ';
 WR_Pb_Init_Assets::inline( 'css', $style );
