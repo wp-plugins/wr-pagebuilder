@@ -55,13 +55,13 @@ For further information, product details, help and tutorials, please visit our w
 
 = 2.4.1 =
 
-#Fixed There is no elements displayed on Element Adding form when activating WR One template
-#Fixed The widget not works
-^Changed Footer links
-^Improved Preview feature
-^Improved Backend style
+ * Fixed There is no elements displayed on Element Adding form when activating WR One template
+ * Fixed The widget not works
+ * Changed Footer links
+ * Improved Preview feature
+ * Improved Backend style
 
 = 2.4.2 =
 
-^Changed Footer links
-^Improve core functions
+ * Changed Footer links
+ * Improve core functions
