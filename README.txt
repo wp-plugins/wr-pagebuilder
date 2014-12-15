@@ -65,3 +65,10 @@ For further information, product details, help and tutorials, please visit our w
 
  * Changed Footer links
  * Improve core functions
+
+= 2.4.3 =
+
+ * Added Language files
+ * Fixed Bug in Widget element
+ * Fixed Bug in Accordion Element
+ * Fixed Other displaying bugs
