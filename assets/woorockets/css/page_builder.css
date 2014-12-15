@@ -2109,6 +2109,15 @@ button .wr-loading {
 	top: -28px;
 	left: -10px;
 }
+button.qt-fullscreen {
+	font: 400 20px/1 dashicons;
+	color: #777;
+	margin-top: 5px;
+	margin-right: 5px;
+}
+#ed_toolbar {
+	width: 100% !important;
+}
 
 /* WooRockets logo & banner */
 .wr-logo-40 {

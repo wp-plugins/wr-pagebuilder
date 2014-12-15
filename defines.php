@@ -18,7 +18,7 @@ define( 'WR_PB_TPL_PATH', WR_PB_PATH . 'templates' );
 define( 'WR_PB_URI', plugin_dir_url( __FILE__ ) );
 
 // Define plugin domain
-define( 'WR_PBL', 'wr-pb' );
+define( 'WR_PBL', 'wrpagebuilder' );
 
 // Define nonce ID
 define( 'WR_NONCE', 'wr_nonce_check' );

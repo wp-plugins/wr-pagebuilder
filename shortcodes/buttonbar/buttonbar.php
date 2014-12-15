@@ -181,19 +181,23 @@ class WR_Buttonbar extends WR_Pb_Shortcode_Parent {
 		}
 		$sub_shortcode = implode( '', $items );
 		$sub_htmls     = $sub_shortcode;
-		if ( $arr_params['buttonbar_show_title'] == 'no' ) {
-			$pattern   = '\\[(\\[?)(title)(?![\\w-])([^\\]\\/]*(?:\\/(?!\\])[^\\]\\/]*)*?)(?:(\\/)\\]|\\](?:([^\\[]*+(?:\\[(?!\\/\\2\\])[^\\[]*+)*+)\\[\\/\\2\\])?)(\\]?)';
-			$sub_htmls = preg_replace( '/' . $pattern . '/s', '', $sub_htmls );
-		} else {
+
+		$arr_params['buttonbar_show_title'] = explode( '__#__', $arr_params['buttonbar_show_title'] );
+		if ( in_array( 'yes', $arr_params['buttonbar_show_title'] ) ) {
 			$sub_htmls = str_replace( '[title]', '', $sub_htmls );
 			$sub_htmls = str_replace( '[/title]', '', $sub_htmls );
-		}
-		if ( $arr_params['buttonbar_show_icon'] == 'no' ) {
-			$pattern   = '\\[(\\[?)(icon)(?![\\w-])([^\\]\\/]*(?:\\/(?!\\])[^\\]\\/]*)*?)(?:(\\/)\\]|\\](?:([^\\[]*+(?:\\[(?!\\/\\2\\])[^\\[]*+)*+)\\[\\/\\2\\])?)(\\]?)';
-			$sub_htmls = preg_replace( '/' . $pattern . '/s', '', $sub_htmls );
 		} else {
+			$pattern   = '\\[(\\[?)(title)(?![\\w-])([^\\]\\/]*(?:\\/(?!\\])[^\\]\\/]*)*?)(?:(\\/)\\]|\\](?:([^\\[]*+(?:\\[(?!\\/\\2\\])[^\\[]*+)*+)\\[\\/\\2\\])?)(\\]?)';
+			$sub_htmls = preg_replace( '/' . $pattern . '/s', '', $sub_htmls );
+		}
+
+		$arr_params['buttonbar_show_icon'] = explode( '__#__', $arr_params['buttonbar_show_icon'] );
+		if ( in_array( 'yes', $arr_params['buttonbar_show_icon'] ) ) {
 			$sub_htmls = str_replace( '[icon]', '', $sub_htmls );
 			$sub_htmls = str_replace( '[/icon]', '', $sub_htmls );
+		} else {
+			$pattern   = '\\[(\\[?)(icon)(?![\\w-])([^\\]\\/]*(?:\\/(?!\\])[^\\]\\/]*)*?)(?:(\\/)\\]|\\](?:([^\\[]*+(?:\\[(?!\\/\\2\\])[^\\[]*+)*+)\\[\\/\\2\\])?)(\\]?)';
+			$sub_htmls = preg_replace( '/' . $pattern . '/s', '', $sub_htmls );
 		}
 
 		// button margin between
