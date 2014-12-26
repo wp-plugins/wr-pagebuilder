@@ -10,7 +10,7 @@ WR Page Builder is a simple Drag and Drop page builder that helps you build a co
 
 == Description ==
 
-WR Page Builder is a simple Drag and Drop page builder that helps you build a complete WordPress website in a few minutes without coding knowledge required. Designed with an intuitive interface, simple and extremely easy to use, this plugin gives a new experience for building pages and creating an entire online shop by visual drag-and-drop functionality. 
+WR Page Builder is a simple Drag and Drop page builder that helps you build a complete WordPress website in a few minutes without coding knowledge required. Designed with an intuitive interface, simple and extremely easy to use, this plugin gives a new experience for building pages and creating an entire online shop by visual drag-and-drop functionality.
 
 The plugin is similar to an advanced editor and used for both post and page. It includes full page elements, widget support, built-in short codes and much more options that provide an unlimited number of style variations so there is no need to touch any code. In particular, the remarkable improvement in the live preview mode, there will no longer be any feeling glitzy when creating too many things.
 
