@@ -77,3 +77,8 @@ For further information, product details, help and tutorials, please visit our w
  * Fixed Bug in Widget element
  * Fixed Bug in Accordion Element
  * Fixed Other displaying bugs
+
+ = 2.4.4 =
+
+ * Fixed WYSIWYG editor auto add br tag after saving
+ * Added About us page
