@@ -2,7 +2,7 @@
 Contributors: woorockets, hieudm, hanhbun
 Tags: page builder, page builder, admin, advanced, content, easy to use, editor, element, page, plugin, post, responsive, visual, widget, builder, CSS, layout, advanced page elements, gallery, building page
 Requires at least: 3.6
-Tested up to: 4.0
+Tested up to: 4.1
 Stable tag: 3.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
