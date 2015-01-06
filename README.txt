@@ -1,5 +1,5 @@
 === Page Builder by WooRockets.com ===
-Contributors: woorockets, hieudm, hanhbun
+Contributors: woorockets, hieudm
 Tags: page builder, page builder, admin, advanced, content, easy to use, editor, element, page, plugin, post, responsive, visual, widget, builder, CSS, layout, advanced page elements, gallery, building page
 Requires at least: 3.6
 Tested up to: 4.1
@@ -37,7 +37,7 @@ The plugin is similar to an advanced editor and used for both post and page. It 
 
 > <strong>Get Involved</strong>
 
-> * <b>Fork on Github</b>: WR PageBuilder’s source code is published on <a href="http://github.com/WooRockets">Github</a> and is always updated to latest version. Feel free to use our plugin to server any of your purposes. Your engagement is always welcome!
+> * <b>Fork on Github</b>: WR PageBuilder’s source code is published on <a href="http://github.com/WooRockets/WR-PageBuilder">Github</a> and is always updated to latest version. Feel free to use our plugin to server any of your purposes. Your engagement is always welcome!
 > * <b>Help translate on Transifex</b>: Make WR PageBuilder better for local communities by translating it to different languages. Your help will make it easier for thousands of WordPress users. Sign up and give us a hand <a href="http://www.transifex.com/projects/p/wr-pagebuilder/">here</a>.
 
 <i>*<a href="https://wordpress.org/support/view/plugin-reviews/wr-pagebuilder">If you like the plugin, please vote for it!</a>*</i>
