@@ -35,12 +35,12 @@ The plugin is similar to an advanced editor and used for both post and page. It 
 * <a href="http://www.woorockets.com/forum/">Support Forum</a>
 * <a href="http://www.woorockets.com/docs/wr-pagebuilder-user-manual/">Documentation</a>
 
-<h4>Get Involved</h4>
+> <strong>Get Involved</strong>
 
-* <b>Fork on Github</b>: WR PageBuilder’s source code is published on <a href="http://github.com/WooRockets">Github</a> and is always updated to latest version. Feel free to use our plugin to server any of your purposes. Your engagement is always welcome!
-* <b>Help translate on Transifex</b>: Make WR PageBuilder better for local communities by translating it to different languages. Your help will make it easier for thousands of WordPress users. Sign up and give us a hand <a href="http://www.transifex.com/projects/p/wr-pagebuilder/">here</a>.
+> * <b>Fork on Github</b>: WR PageBuilder’s source code is published on <a href="http://github.com/WooRockets">Github</a> and is always updated to latest version. Feel free to use our plugin to server any of your purposes. Your engagement is always welcome!
+> * <b>Help translate on Transifex</b>: Make WR PageBuilder better for local communities by translating it to different languages. Your help will make it easier for thousands of WordPress users. Sign up and give us a hand <a href="http://www.transifex.com/projects/p/wr-pagebuilder/">here</a>.
 
-<i>*If you like the plugin, please vote for it!*</i>
+<i>*<a href="https://wordpress.org/support/view/plugin-reviews/wr-pagebuilder">If you like the plugin, please vote for it!</a>*</i>
 
 == Installation ==
 1. Upload WR Page Builder to the /wp-content/plugins/ directory
