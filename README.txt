@@ -82,3 +82,8 @@ For further information, product details, help and tutorials, please visit our w
 
  * Fixed WYSIWYG editor auto add br tag after saving
  * Added About us page
+
+ = 2.4.5 =
+
+ * Added About page and show it after installing the plugin
+ * Improved Wrap all strings in About us page to translation function
