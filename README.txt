@@ -87,3 +87,9 @@ For further information, product details, help and tutorials, please visit our w
 
  * Added About page and show it after installing the plugin
  * Improved Wrap all strings in About us page to translation function
+
+ = 2.4.6 =
+
+ * Added Volunteer translator call
+ * Fixed Network Deactivate function doesn't work
+ * Fixed Problem adding RevSlider widget element
