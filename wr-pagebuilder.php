@@ -3,7 +3,7 @@
  * Plugin Name: WR PageBuilder
  * Plugin URI:  http://www.woorockets.com
  * Description: Awesome content builder for Wordpress websites
- * Version:     2.4.6
+ * Version:     2.4.7
  * Author:      WooRockets Team <support@www.woorockets.com>
  * Author URI:  http://www.wordpress.org/plugins/wr-pagebuilder
  * License:     GNU/GPL v2 or later http://www.gnu.org/licenses/gpl-2.0.html
@@ -17,9 +17,6 @@ define( 'WR_PB_FILE', __FILE__ );
 
 // Load WordPress plugin functions
 require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-
-// Turn off auto changes double line-breaks in the text into HTML paragraphs
-remove_filter( 'the_content', 'wpautop' );
 
 if ( ! class_exists( 'WR_Pb_Init' ) ) :
 

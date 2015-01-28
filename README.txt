@@ -93,3 +93,7 @@ For further information, product details, help and tutorials, please visit our w
  * Added Volunteer translator call
  * Fixed Network Deactivate function doesn't work
  * Fixed Problem adding RevSlider widget element
+
+ = 2.4.7 =
+
+ * Fixed Revert autop
