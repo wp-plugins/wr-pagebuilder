@@ -330,7 +330,7 @@ class WR_Pb_Converter_Site_Origin extends WR_Pb_Converter {
 				break;
 
 			case 'content' :
-				$content = $this->post->post_content;
+				$content = wpautop( $this->post->post_content );
 				break;
 
 			case 'featured' :

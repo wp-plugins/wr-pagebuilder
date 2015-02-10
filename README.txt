@@ -97,3 +97,8 @@ For further information, product details, help and tutorials, please visit our w
  = 2.4.7 =
 
  * Fixed Revert autop
+
+ = 2.4.8 =
+
+ * Improved About page
+ * Fixed Bug in WYSIWYG editor
