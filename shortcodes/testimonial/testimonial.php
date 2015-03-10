@@ -221,7 +221,11 @@ class WR_Testimonial extends WR_Pb_Shortcode_Parent {
 				$testimonial_info['content'] = "<div class='wr-testimonial-box top'><div class='arrow'></div><div class='wr-testimonial-content'><p>" . $item_content . '</p></div></div>';
 			}
 
-			$img = ! empty( $item['image_file'] ) ? "<div class='wr-testimonial-avatar'><img class='$image_container_style' src='{$item['image_file']}' /></div>" : '';
+			$data = getimagesize( $item['image_file'] );
+			$width = $data[0];
+			$height = $data[1];
+
+			$img = ! empty( $item['image_file'] ) ? "<div class='wr-testimonial-avatar'><img width='{$width}' height='{$height}' class='$image_container_style' src='{$item['image_file']}' /></div>" : '';
 			$testimonial_info['image']    = ( in_array( 'image', $content_elements ) ) ? $img : '';
 
 			// Process company field

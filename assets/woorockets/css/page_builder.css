@@ -738,6 +738,11 @@ input:checked+.radio_image {
 .wysiwyg {
 	width: 100% !important;
 }
+#qt_content_dfw{
+	font: 400 20px/1 dashicons;
+	color: #777;
+	margin: 5px 5px 0 0;
+}
 
 /* === Premade layout === */
 #save-as-new-dialog {

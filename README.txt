@@ -102,3 +102,7 @@ For further information, product details, help and tutorials, please visit our w
 
  * Improved About page
  * Fixed Bug in WYSIWYG editor
+
+ = 2.4.9 =
+
+ * Fixed php errors detected by Query Monitor plugin
