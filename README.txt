@@ -106,3 +106,11 @@ For further information, product details, help and tutorials, please visit our w
  = 2.4.9 =
 
  * Fixed php errors detected by Query Monitor plugin
+
+ = 2.4.10 =
+
+ * Fixed bug in WYSIWYG editor
+ * Added parameter "Hidden on" to column setting
+ * Fixed Some minor bugs
+
+
