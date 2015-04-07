@@ -113,4 +113,7 @@ For further information, product details, help and tutorials, please visit our w
  * Added parameter "Hidden on" to column setting
  * Fixed Some minor bugs
 
+ = 2.4.11 =
 
+ * Fixed Style of modal conflict with Woocommerce plugin
+ * Fixed Bug conflict with Advanced Custom Fields plugin
