@@ -129,3 +129,7 @@ For further information, product details, help and tutorials, please visit our w
  * Fixed broken lines in Price Table Element
  * Fixed Alt attribute missing for images in carousel
  * Added Share element
+
+ = 2.5.1 =
+
+ * Changed banners in back-end
