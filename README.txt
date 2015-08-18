@@ -131,3 +131,7 @@ For further information, product details, help and tutorials, please visit our w
  = 2.5.1 =
 
  * Minor changes in back-end setting
+ 
+ = 2.5.2 =
+
+ * Updated Polish translation
