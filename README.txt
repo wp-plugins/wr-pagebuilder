@@ -134,3 +134,7 @@ For further information, product details, help and tutorials, please visit our w
  = 2.5.2 =
 
  * Updated Polish translation
+ 
+ = 2.5.3 =
+
+ * Fixed Some minor bugs
